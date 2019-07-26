@@ -16,7 +16,7 @@ export default function LocationsList() {
       .catch(error => console.log('Unexpected Error: ', error))
   }, [])//Cannot add anything to the dependency array as then useEffect will perform API requests to check if locations changed and hit API limit.
 
-  return <section className="location-list grid view">
+  return <section className="location-list grid-view">
     {locations.map((location, index) => <LocationCard key={index} location={location} />)}
   </section>
 }

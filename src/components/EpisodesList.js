@@ -15,7 +15,7 @@ export default function EpisodesList() {
       .catch(error => console.log('Unexpected Error: ', error))
   }, [])//Cannot add anything to the dependency array as then useEffect will perform API requests to check if episodes changed and hit API limit.
 
-  return <section className="episode-list">
+  return <section className="episode-list grid-view">
     {episodes.map((episode, index) =>
       <Card key={index}>
         <Card.Content>
